@@ -9,6 +9,13 @@ git clone -b v2019.04 https://github.com/u-boot/u-boot --depth=1
 cd u-boot/
 git pull --no-edit https://github.com/beagleboard/u-boot v2019.04-bbb.io-am335x
 
+#
+sudo apt-get install build-essential
+
+sudo apt-get install bison
+
+sudo apt-get install flex libncurses-dev libssl-dev libelf-dev
+
 # build uboot
 make ARCH=arm CROSS_COMPILE=${CC} distclean
 make ARCH=arm CROSS_COMPILE=${CC} am335x_evm_defconfig
